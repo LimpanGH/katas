@@ -1,8 +1,8 @@
-
 /* Contents:
 
 1. For Loop
 2. While Loop
+3. Do While
 
 forEach
 for in
@@ -12,11 +12,8 @@ reduce
 
 */
 
-
-// 1.1 For Loop ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * 
-// For loop  5 to 10.
-
-
+// 1 For Loop (run a specific number of times) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+// 1.1 For loop  5 to 10.
 
 // Solution:
 // for (let i = 5; i <= 10; i++) {
@@ -27,8 +24,6 @@ reduce
 // 1.2 For Loop ----------------------------------------------------------------
 // for loop 3-0
 
-
-
 // Solution:
 // for (let counter = 3; counter >= 0; counter--){
 //     console.log(counter);
@@ -37,8 +32,6 @@ reduce
 
 // 1.2 For Loop ----------------------------------------------------------------
 // for loop an array, print each index and each item
-
-
 
 // Solution:
 // for (let i = 0; i < vacationSpots.length; i++) {
@@ -51,7 +44,6 @@ reduce
 // 1.3 For Loop Nested ----------------------------------------------------------------
 // Nested Loops, find the names that exists in both arrays
 
-
 // Solution:
 // let bobsFollowers = ['john', 'jane', 'jill', 'juno'];
 // let tinasFollowers = ['john', 'bob', 'jane'];
@@ -62,40 +54,71 @@ reduce
 //   for (let tf = 0; tf < tinasFollowers.length; tf++) {
 //     if (bobsFollowers[bf] === tinasFollowers[tf]) {
 //       mutualFollowers.push(bobsFollowers[bf])
-//     } 
+//     }
 //   }
 // }
 
 // console.log(mutualFollowers)
 //   Prints: [ 'john', 'jane' ]
 
-
-// 2. While Loop ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * 
+// 2. While Loop (when you dont know how many times to run) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
 // 2. 1 While Loop, randomly loop through the array until 'spade'.
-
 
 // Solution:
 // const cards = ['diamond', 'spade', 'heart', 'club'];
 
-// let currentCard;
+// let currentCard
 
 // while (currentCard != 'spade') {
-//     currentCard = cards[Math.floor(Math.random() *4)]
-//     console.log(currentCard);
+//   currentCard = cards[Math.floor(Math.random() * cards.length)]
+//   console.log(currentCard)
 // }
-//   Prints: club spade
+//   Prints: ... spade
 
 
-// 2. ----------------------------------------------------------------
 
-
-// Solution:
-
-//   Prints: 
-
-// 2. ----------------------------------------------------------------
+// 3. Do While (runs at least once)----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+// 3.1 Do While until correct number of cups needed
 
 
 // Solution:
+// let cupsOfSugarNeeded = 5;
+// let cupsAdded = 0;
 
-//   Prints: 
+// do {
+//   cupsAdded++;
+//   console.log(cupsAdded);
+// } while (cupsAdded < cupsOfSugarNeeded); 
+//   Prints: 1 2 3 4 5
+
+
+// 3.2 Do While dice ----------------------------------------------------------------
+// Do While untill dice target-number produced
+
+// Solution:
+// const targetNumber = 6
+// let rolls = 0
+// let rolledNumber
+
+// do { 
+//   rolledNumber = Math.floor(Math.random() * targetNumber) +1
+//   rolls++
+//   console.log(`Roll # ${rolls} : Rolled ${rolledNumber}`)
+// } while (rolledNumber != targetNumber)
+
+// console.log(`TargetNumber ${targetNumber} was rolled after ${rolls}`)
+//   Print-example: Roll # 1 : Rolled 1
+//                  Roll # 2 : Rolled 1
+//                  Roll # 3 : Rolled 6
+//                  TargetNumber 6 was rolled after 3
+
+
+
+
+Continue @ https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/exercises/break-keyword
+
+// . ----------------------------------------------------------------
+
+// Solution:
+
+//   Prints:
