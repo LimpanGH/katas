@@ -32,6 +32,7 @@ reduce
 
 // 1.2 For Loop ----------------------------------------------------------------
 // for loop an array, print each index and each item
+//let vacationSpots = ['Bali', 'Paris', 'Tulum']
 
 // Solution:
 // for (let i = 0; i < vacationSpots.length; i++) {
@@ -42,12 +43,11 @@ reduce
 //           2 'Tulum'
 
 // 1.3 For Loop Nested ----------------------------------------------------------------
-// Nested Loops, find the names that exists in both arrays
-
-// Solution:
+// Nested Loops, find the names that exists in both arrays and push them to an array called mutualFollowers, print that array.
 // let bobsFollowers = ['john', 'jane', 'jill', 'juno'];
 // let tinasFollowers = ['john', 'bob', 'jane'];
 
+// Solution:
 // let mutualFollowers = []
 
 // for (let bf = 0; bf < bobsFollowers.length; bf++) {
@@ -61,25 +61,22 @@ reduce
 // console.log(mutualFollowers)
 //   Prints: [ 'john', 'jane' ]
 
-// 2. While Loop (when you dont know how many times to run) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
-// 2. 1 While Loop, randomly loop through the array until 'spade'.
+// 2. While Loop (when you dont know how many times to run the loop) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
 
-// Solution:
+// 2. 1 While Loop, randomly loop through the array until 'spade', first declare a variable called currentCard.
 // const cards = ['diamond', 'spade', 'heart', 'club'];
 
-// let currentCard
+// Solution:
+// let currentCard = ''
 
-// while (currentCard != 'spade') {
+// while (currentCard != 'spade') {     // Add the condition last in this example, or it will generate an infinite loop.
 //   currentCard = cards[Math.floor(Math.random() * cards.length)]
 //   console.log(currentCard)
 // }
 //   Prints: ... spade
 
-
-
 // 3. Do While (runs at least once)----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
 // 3.1 Do While until correct number of cups needed
-
 
 // Solution:
 // let cupsOfSugarNeeded = 5;
@@ -88,9 +85,8 @@ reduce
 // do {
 //   cupsAdded++;
 //   console.log(cupsAdded);
-// } while (cupsAdded < cupsOfSugarNeeded); 
+// } while (cupsAdded < cupsOfSugarNeeded);
 //   Prints: 1 2 3 4 5
-
 
 // 3.2 Do While dice ----------------------------------------------------------------
 // Do While untill dice target-number produced
@@ -100,7 +96,7 @@ reduce
 // let rolls = 0
 // let rolledNumber
 
-// do { 
+// do {
 //   rolledNumber = Math.floor(Math.random() * targetNumber) +1
 //   rolls++
 //   console.log(`Roll # ${rolls} : Rolled ${rolledNumber}`)
@@ -112,10 +108,7 @@ reduce
 //                  Roll # 3 : Rolled 6
 //                  TargetNumber 6 was rolled after 3
 
-
-
-
-Continue @ https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/exercises/break-keyword
+// Continue @ https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/exercises/break-keyword
 
 // . ----------------------------------------------------------------
 
