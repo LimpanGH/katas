@@ -63,20 +63,23 @@ reduce
 
 // 2. While Loop (when you dont know how many times to run the loop) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
 
-// 2. 1 While Loop, randomly loop through the array until 'spade', first declare a variable called currentCard.
+// 2. 1 While Loop, randomly loop through the array until 'spade', first declare a variable called currentCard. Also keep track of iterations.
+// (comment out the line with the condition till the end or i'll get an infinite)
 // const cards = ['diamond', 'spade', 'heart', 'club'];
 
 // Solution:
-// let currentCard = ''
+// let currentCard;
+// let iteration = 0;
 
-// while (currentCard != 'spade') {     // Add the condition last in this example, or it will generate an infinite loop.
-//   currentCard = cards[Math.floor(Math.random() * cards.length)]
-//   console.log(currentCard)
+// while (currentCard != 'spade') {
+//     currentCard = cards[Math.floor(Math.random() * cards.length)]
+//     console.log(`Iteration ${iteration +1}: ${currentCard}`);
+//     iteration++
 // }
-//   Prints: ... spade
+//   Prints: ... Iteration x: spade
 
 // 3. Do While (runs at least once)----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
-// 3.1 Do While until correct number of cups needed
+// 3.1 Do While until correct number of cups needed. (comment out last line untill finished writing it)
 
 // Solution:
 // let cupsOfSugarNeeded = 5;
