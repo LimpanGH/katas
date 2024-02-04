@@ -3,9 +3,10 @@
 1. For Loop
 2. While Loop
 3. Do While
+4. for in (objects)
+5. for of (arrays)
 
 forEach
-for in
 map
 filter
 reduce
@@ -110,6 +111,38 @@ reduce
 //                  Roll # 2 : Rolled 1
 //                  Roll # 3 : Rolled 6
 //                  TargetNumber 6 was rolled after 3
+
+// 4. for in ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+
+// 4.1 for in (object) ----------------------------------------------------------------
+// Iterate through the object and print each key and its value.
+
+// Solution:
+// const person = {
+//     name: 'John',
+//     age: 30,
+//     city: 'New York'
+//   };
+
+//   for (let key in person) {
+//     console.log(`${key}: ${person[key]}`);
+//   }
+// Prints: name: John
+//          age: 30
+//         city: New York
+
+// 5. for of (array) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+
+// 5.1 for of  ----------------------------------------------------------------
+// Loop through the array [1, 2, 3, 4, 5]
+
+// Solution:
+// const numbers = [1, 2, 3, 4, 5];
+
+// for (let number of numbers) {
+//   console.log(number);
+// }
+//   Prints: 1 2 3 4 5
 
 // Continue @ https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/exercises/break-keyword
 
