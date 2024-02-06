@@ -155,7 +155,7 @@ reduce
 //     console.log(num);
 // })
 
-// const siffror = [1,2,3,4,5] 
+// const siffror = [1,2,3,4,5]
 // siffror.forEach((num) => {
 //     console.log(num);
 // })
@@ -163,8 +163,6 @@ reduce
 
 // 5.2 forEach ------------------------------------------------
 // Print a formatted string for each persons name with arrow FC and then anonymous FC
-
-
 
 // const people = [
 //     {name: 'Alice', age: 30, city: 'New York'},
@@ -184,8 +182,7 @@ reduce
 // Prints: Alice
 //         Bob
 //         Charlie
-//         David 
-
+//         David
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 // Continue @ https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/exercises/break-keyword
@@ -193,3 +190,4 @@ reduce
 // Solution:
 
 //   Prints:
+
