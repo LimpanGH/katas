@@ -5,8 +5,8 @@
 3. Do While
 4. for in (objects)
 5. for of (arrays)
+6. forEach (array)
 
-forEach
 map
 filter
 reduce
@@ -142,11 +142,53 @@ reduce
 // for (let number of numbers) {
 //   console.log(number);
 // }
+// Prints: 1 2 3 4 5
+
+// 5. forEach (array) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+
+// 5.1 forEach anonymous and arrow ------------------------------------------------
+//Loop through an array: [1,2,3,4,5], and print all numbers with anonymous function and then with arrow function
+
+// Solution:
+// const numbers = [1,2,3,4,5];
+// numbers.forEach(function (num) {
+//     console.log(num);
+// })
+
+// const siffror = [1,2,3,4,5] 
+// siffror.forEach((num) => {
+//     console.log(num);
+// })
 //   Prints: 1 2 3 4 5
 
-// Continue @ https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/exercises/break-keyword
+// 5.2 forEach ------------------------------------------------
+// Print a formatted string for each persons name with arrow FC and then anonymous FC
 
-// . ----------------------------------------------------------------
+
+
+// const people = [
+//     {name: 'Alice', age: 30, city: 'New York'},
+//     {name: 'Bob', age: 25, city: 'Los Angeles'},
+//     {name: 'Charlie', age: 35, city: 'Chicago'},
+//     {name: 'David', age: 40, city: 'San Francisco'}
+// ];
+
+// people.forEach((personArrow) => {
+//     console.log(personArrow.name);
+// })
+
+// people.forEach(function (personAnonymous){
+//     console.log(personAnonymous.name);
+// })
+
+// Prints: Alice
+//         Bob
+//         Charlie
+//         David 
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+// Continue @ https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/exercises/break-keyword
 
 // Solution:
 
