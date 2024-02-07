@@ -248,18 +248,17 @@
 //   // Testa negativ insättning
 //   myAccount.deposit(-50);
 
-
 // Statisk metod ---------------------------------------------------------------------------
 // class User {
 //     constructor(username) {
 //       this.username = username;
 //     }
-    
+
 //     // Vanlig metod som anropas genom instansobjektet
 //     displayUsername() {
 //       return `Username: ${this.username}`;
 //     }
-    
+
 //     // En metod som anropas enbart på klassnamnet ('hoppar' över konstruktorn)
 //     static checkValidEmail(email) {
 //       if (email.includes('@')) {
@@ -268,21 +267,105 @@
 //         return 'Invalid email format';
 //       }
 //     }
-    
+
 //     static loginHelloEmail(email) {
 //       console.log(this.checkValidEmail(email));
 //       console.log('Logged in with helloEmail');
 //     }
 //   }
-  
+
 //   // Vanligt utan static
 //   const user1 = new User('JohnDoe');
 //   console.log(user1.displayUsername());
-  
+
 //   // Anropa en statisk metod
 //   console.log(User.checkValidEmail('john.doe@example.com'));
-  
+
 //   // Anropa en annan statisk metod
 //   User.loginHelloEmail('john.doe@example.com');
+
+
+//   ARV ---------------------------------------------------------------------------------------
+// Basklassen
+// class User {
+//   constructor(username, password) {
+//     this.username = username;
+//     this.password = password;
+//   }
+
+//   // Regular method called through instance object
+//   displayUsername() {
+//     return `Username: ${this.username}`;
+//   }
+//   displayUsernamePassword() {
+//     return `Username: ${this.username} Password: ${this.password}`;
+//   }
+// }
+
+// class AdminUser extends User {
+//   constructor(username, password) {
+//     super(username, password); // Borde inte behöva un och pw här 🤔, borde skrivas mer cleant..
+//     this.bannedUsers = [];
+//   }
+
+//   banUser(user) {
+//     this.bannedUsers.push(user);
+//   }
+
+//   displayBannedUsers() {
+//     return `Banned users: ${this.bannedUsers.join(', ')}`;
+//   }
+// }
+
+// const adminUser = new AdminUser('sandra', '123');
+// adminUser.banUser('Torsten');
+// console.log(adminUser.displayBannedUsers());
+// console.log(adminUser.displayUsernamePassword());
+
+// Geters and seters -----------------------------------------------------------------------------------------
+// class Person {
+//     constructor(name, age) {
+//       this._name = name; // Använd en underskrap för att indikera att detta är en "privat" egenskap
+//       this._age = age;
+//     }
   
-  // -------------------------------------------------------------------------------------------------------------
+//     // Getter för namn
+//     get name() {
+//       return this._name;
+//     }
+  
+//     // Setter för namn
+//     set name(newName) {
+//       // Här kan du lägga till valideringslogik om du vill
+//       this._name = newName;
+//     }
+  
+//     // Getter för ålder
+//     get age() {
+//       return this._age;
+//     }
+  
+//     // Setter för ålder
+//     set age(newAge) {
+//       if (newAge > 0 && newAge < 150) { // Enkel validering för ålder
+//         this._age = newAge;
+//       } else {
+//         console.log("Invalid age input");
+//       }
+//     }
+//   }
+  
+//   // Skapa en instans av Person-klassen
+//   const person1 = new Person("Alice", 30);
+  
+//   // Använd getters och setters för att komma åt och ändra egenskaper
+//   console.log(person1.name); // Output: Alice
+//   console.log(person1.age); // Output: 30
+  
+//   person1.name = "Bob"; // Använd setter för att ändra namnet
+//   person1.age = 25; // Använd setter för att ändra åldern
+  
+//   console.log(person1.name); // Output: Bob
+//   console.log(person1.age); // Output: 25
+  
+// ----------------------------------------------------------------------------------------
