@@ -36,8 +36,7 @@
 //   }
 // })
 // console.log(allElems);
-// // Prints: an array of objects, each containing information about the corresponding element in the original array. 
-
+// // Prints: an array of objects, each containing information about the corresponding element in the original array.
 
 // Map 1.3 print all items names and price -----------------------------
 // const items = [
@@ -60,34 +59,36 @@
 // 2. FILTER ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
 // Filter 2.1 filter out all prices <= to 100. -----------------------------
-const items = [
-  { name: 'Bike', price: 100 },
-  { name: 'TV', price: 200 },
-  { name: 'Album', price: 10 },
-  { name: 'Book', price: 5 },
-  { name: 'Phone', price: 500 },
-  { name: 'Computer', price: 1000 },
-  { name: 'Keyboard', price: 25 },
-];
+// const items = [
+//   { name: 'Bike', price: 100 },
+//   { name: 'TV', price: 200 },
+//   { name: 'Album', price: 10 },
+//   { name: 'Book', price: 5 },
+//   { name: 'Phone', price: 500 },
+//   { name: 'Computer', price: 1000 },
+//   { name: 'Keyboard', price: 25 },
+// ];
 
-const allPricesLessThan100 = items.filter((parameter)=>{
-if(parameter.price <= 100) {
-  return parameter.price
-}
-})
+// Solution 1 :
+// const filteredItems = items.filter((item) => {
+//     // return item.price <= 100 // This is a shorter way than the if statement.
+//     if (item.price <= 100) {
+//         return item
+//     }
+// })
 
-console.log(allPricesLessThan100);
+// console.log(filteredItems);
+// Prints: An array with all items that costs $100 or less
 
-// // Solution
-// // const filteredItems = items.filter((item) => {
-// //     // return item.price <= 100 // This is a shorter way than the if statement.
-// //     if (item.price <= 100) {
-// //         return item.price
-// //     }
-// // })
-
-// // console.log(filteredItems);
-// // Prints: An array with all items that costs $100 or less
+// Solution 2, for logging just the price:
+// const allPricesLessThan100 = items
+//   .filter((parameter) => {
+//     return parameter.price <= 100;
+//   })
+//   .map((item) => {
+//     return item.price;
+//   });
+//console.log(allPricesLessThan100); // Prints: [100, 10, 5, 25]
 
 // 3. REDUCE ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
@@ -99,41 +100,54 @@ console.log(allPricesLessThan100);
 //   { name: 'Monitor', price: 100 },
 // ];
 
-// // With forEach ---------
-// // let totalPrice = 0
-// // items.forEach(item => {
-// //     totalPrice += item.price
-// // })
+// With forEach ---------
+// let totalPrice = 0
+// items.forEach(item => {
+//     totalPrice += item.price
+// })
+// console.log(totalPrice);
 
-// // Solution with reduce --------
-// // const totalPrice = items.reduce((total, item) => {
-// //   console.log(item.price);
-// //   return total + item.price;
-// // }, 0);
+// Solution with reduce on the prices--------
+// const total = items.reduce((accumulator, item) => {
+//   console.log(item.name + ' ' +item.price);
+//   return accumulator + item.price
+// }, 0)
+// console.log('Total' + ' ' + total);
+// Prints: Rice 5
+//         Book 20
+//         Chicken 10
+//         Monitor 100
+//         Total 135
 
-// // console.log(totalPrice);
-// // Prints 135
+// Solution with reduce on the names --------
+// const allNames = items.reduce((accumulator, items) => {
+//   return accumulator + items.name + ','
+// }, '')
+// console.log(allNames);
 
 // Reduce 3.2 Print all names and add all prices and print the total -----------------------------
 // const items = [
-//     { name: 'Bike', price: 100 },
-//     { name: 'TV', price: 200 },
-//     { name: 'Album', price: 10 },
-//     { name: 'Book', price: 5 },
-//     { name: 'Phone', price: 500 },
-//     { name: 'Computer', price: 1000 },
-//     { name: 'Keyboard', price: 25 },
-//   ];
+//   { name: 'Bike', price: 100 },
+//   { name: 'TV', price: 200 },
+//   { name: 'Album', price: 10 },
+//   { name: 'Book', price: 5 },
+//   { name: 'Phone', price: 500 },
+//   { name: 'Computer', price: 1000 },
+//   { name: 'Keyboard', price: 25 },
+// ];
 
-//   // Solution
-//   // const { itemNames, totalPrice } = items.reduce((accumulator, currentItem) => {
-//   //     accumulator.itemNames.push(currentItem.name);
-//   //     accumulator.totalPrice += currentItem.price;
-//   //     return accumulator;
-//   //   }, { itemNames: [], totalPrice: 0 });
-
-//   //   console.log(itemNames); // Prints: ["Bike","TV","Album","Book","Phone","Computer","Keyboard"]
-//   //   console.log(totalPrice); // Prints: 1840
+// Solution
+// const { itemNames, totalPrice } = items.reduce(
+//   (accumulator, currentItem) => {
+//     accumulator.itemNames.push(currentItem.name);
+//     accumulator.totalPrice += currentItem.price;
+//     return accumulator;
+//   },
+//   { itemNames: [], totalPrice: 0 }
+// );
+//
+// console.log(itemNames); // Prints: ["Bike","TV","Album","Book","Phone","Computer","Keyboard"]
+// console.log(totalPrice); // Prints: 1840
 
 // Reduce 3.3 Group people that has the same age -----------------------------
 // const people = [
