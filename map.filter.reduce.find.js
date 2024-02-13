@@ -8,44 +8,38 @@
 
 // 1. MAP ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
-// Map 1.1 map all elements in the array -----------------------------
+// Map 1.1 map all elements in the array and doubble them -----------------------------
 // let arr = ['a','b','c','d','e','f','g']
 
-// const allElems = arr.map((elem) => {
-//     return elem
-// })
-
-// console.log(allElems);
+// // Solution
+// // let allLettersDoubbled = arr.map((parameter) => {
+// //   return parameter + parameter
+// // })
+// // console.log(allLettersDoubbled); // Prints: ['aa', 'bb', 'cc', 'dd', 'ee', 'ff', 'gg']
 
 // Map 1.2  -----------------------------
-// For each element, we create an object containing:
+// For every element, we create an object containing:
 // - The original value (value).
 // - The index of the element in the array, incremented by 1 (index).
 // - A boolean indicating whether the element is in uppercase (isUpperCase).
+// - The original array
 
-const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+// const arr = ['A', 'b', 'C', 'd', 'e', 'f', 'g'];
 
-const allElems = arr.mao((elem, index) => {
-    return {
-        value:elem,
-        index: index+1
-        isUpperCase: elem.toUpperCase() === elem
-    }
-})
-
-// const allElems = arr.map((elem, index) => {
-//     return {
-//         value: elem,
-//         index: index + 1, // Adding 1 to index to make it 1-based
-//         isUpperCase: elem.toUpperCase() === elem // Checking if the element is uppercase
-//     };
-// });
-
+// Solution:
+// const allElems = arr.map((parameter, index, array) => {
+//   return {
+//     Value: parameter,
+//     Index: index +1,
+//     IsUpperCase: parameter.toUpperCase() === parameter,
+//     Thearray: array
+//   }
+// })
 // console.log(allElems);
-// Prints: an array of objects, each containing information about the corresponding element in the original array. 
+// // Prints: an array of objects, each containing information about the corresponding element in the original array. 
 
 
-// Map 1.3 print all items names -----------------------------
+// Map 1.3 print all items names and price -----------------------------
 // const items = [
 //   { name: 'Bike', price: 100 },
 //   { name: 'TV', price: 200 },
@@ -56,27 +50,33 @@ const allElems = arr.mao((elem, index) => {
 //   { name: 'Keyboard', price: 25 },
 // ];
 
-
-// // Solution
-// // const itemNames = items.map((item) => {
-// //   return item.name;
-// // });
-
-// // console.log(itemNames);
-// // Prints: An array with all the items names
+// //  Solution
+// // let namesAndPrices = items.map((parameter) => {
+// //   return `${parameter.name} ${parameter.price}`
+// // })
+// // console.log(namesAndPrices);
+// // Prints: An array with all the items names and prices
 
 // 2. FILTER ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
 // Filter 2.1 filter out all prices <= to 100. -----------------------------
-// const items = [
-//   { name: 'Bike', price: 100 },
-//   { name: 'TV', price: 200 },
-//   { name: 'Album', price: 10 },
-//   { name: 'Book', price: 5 },
-//   { name: 'Phone', price: 500 },
-//   { name: 'Computer', price: 1000 },
-//   { name: 'Keyboard', price: 25 },
-// ];
+const items = [
+  { name: 'Bike', price: 100 },
+  { name: 'TV', price: 200 },
+  { name: 'Album', price: 10 },
+  { name: 'Book', price: 5 },
+  { name: 'Phone', price: 500 },
+  { name: 'Computer', price: 1000 },
+  { name: 'Keyboard', price: 25 },
+];
+
+const allPricesLessThan100 = items.filter((parameter)=>{
+if(parameter.price <= 100) {
+  return parameter.price
+}
+})
+
+console.log(allPricesLessThan100);
 
 // // Solution
 // // const filteredItems = items.filter((item) => {
