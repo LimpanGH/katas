@@ -8,7 +8,44 @@
 
 // 1. MAP ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
-// // Map 1.1 print all items names
+// Map 1.1 map all elements in the array -----------------------------
+// let arr = ['a','b','c','d','e','f','g']
+
+// const allElems = arr.map((elem) => {
+//     return elem
+// })
+
+// console.log(allElems);
+
+// Map 1.2  -----------------------------
+// For each element, we create an object containing:
+// - The original value (value).
+// - The index of the element in the array, incremented by 1 (index).
+// - A boolean indicating whether the element is in uppercase (isUpperCase).
+
+const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+
+const allElems = arr.mao((elem, index) => {
+    return {
+        value:elem,
+        index: index+1
+        isUpperCase: elem.toUpperCase() === elem
+    }
+})
+
+// const allElems = arr.map((elem, index) => {
+//     return {
+//         value: elem,
+//         index: index + 1, // Adding 1 to index to make it 1-based
+//         isUpperCase: elem.toUpperCase() === elem // Checking if the element is uppercase
+//     };
+// });
+
+// console.log(allElems);
+// Prints: an array of objects, each containing information about the corresponding element in the original array. 
+
+
+// Map 1.3 print all items names -----------------------------
 // const items = [
 //   { name: 'Bike', price: 100 },
 //   { name: 'TV', price: 200 },
@@ -18,6 +55,7 @@
 //   { name: 'Computer', price: 1000 },
 //   { name: 'Keyboard', price: 25 },
 // ];
+
 
 // // Solution
 // // const itemNames = items.map((item) => {
@@ -76,7 +114,28 @@
 // // console.log(totalPrice);
 // // Prints 135
 
-// Reduce 1.2 Group people that has the same age -----------------------------
+// Reduce 3.2 Print all names and add all prices and print the total -----------------------------
+// const items = [
+//     { name: 'Bike', price: 100 },
+//     { name: 'TV', price: 200 },
+//     { name: 'Album', price: 10 },
+//     { name: 'Book', price: 5 },
+//     { name: 'Phone', price: 500 },
+//     { name: 'Computer', price: 1000 },
+//     { name: 'Keyboard', price: 25 },
+//   ];
+
+//   // Solution
+//   // const { itemNames, totalPrice } = items.reduce((accumulator, currentItem) => {
+//   //     accumulator.itemNames.push(currentItem.name);
+//   //     accumulator.totalPrice += currentItem.price;
+//   //     return accumulator;
+//   //   }, { itemNames: [], totalPrice: 0 });
+
+//   //   console.log(itemNames); // Prints: ["Bike","TV","Album","Book","Phone","Computer","Keyboard"]
+//   //   console.log(totalPrice); // Prints: 1840
+
+// Reduce 3.3 Group people that has the same age -----------------------------
 // const people = [
 //   { name: 'Kyle', age: 26 },
 //   { name: 'John', age: 31 },
@@ -99,7 +158,7 @@
 // //         31: (1 person)
 // //         42: (2 people)
 
-// Reduce 1.2 Index and array, (rarely used) -----------------------------
+// Reduce 3.4 Index and array, (rarely used) -----------------------------
 // const numbers = [13, 2, 5]
 // const sum = numbers.reduce((total, number, index, array) => {
 // console.log(`Current index is: ${index}`); // Displaying the index, (rarely used)
