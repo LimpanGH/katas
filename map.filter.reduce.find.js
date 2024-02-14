@@ -1,6 +1,8 @@
 // Resources:
 // Reduce: https://www.youtube.com/watch?v=s1XVfm5mIuU
 
+
+// Array methods: 
 // 1. MAP
 // 2. FILTER
 // 3. REDUCE
