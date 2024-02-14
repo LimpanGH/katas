@@ -136,26 +136,24 @@
 //   { name: 'Keyboard', price: 25 },
 // ];
 
-// Solution
-// const { itemNames, totalPrice } = items.reduce(
+// Solution:
+// const { itemNames, totalPrice } = items.reduce( // 2. { itemNames, totalPrice } are variables fron our destructured accumulator-object, 3. Using the reduce-method on "items"
 //   (accumulator, currentItem) => {
-//     accumulator.itemNames.push(currentItem.name);
-//     accumulator.totalPrice += currentItem.price;
-//     return accumulator;
+//     accumulator.itemNames.push(currentItem.name); // Specifying the "itemNames"-property of the accumulator object, wich is an array, and for each iteration, we push the name from each object in the items-array.
+//     accumulator.totalPrice += currentItem.price; // Specifying the "totalPrice"-property of the accumulator object, wich starts at 0, and for each iteration, we add the price from each object to the totalPrice-propertys value.
+//     return accumulator; // Returning the accumulator object wich now has all the names stored in the itemNames-property and all the total price stored in the totalPrice-property.
 //   },
-//   { itemNames: [], totalPrice: 0 }
+//   { itemNames: [], totalPrice: 0 } // 1. My accumulator, consisting of an object with two properties, set to an empty array and 0.
 // );
-//
 // console.log(itemNames); // Prints: ["Bike","TV","Album","Book","Phone","Computer","Keyboard"]
 // console.log(totalPrice); // Prints: 1840
 
+// Andra argumentet i reduce är hur accumulator ser ut i grundläget.
+// Alltså så att första  accumulator.itemNames och accumulator.price finns definierade i första iterationen.
+// Sen är det bara att alla items sparas/pushas till itemNames arrayen och price summeras till totalPrice.
+// Det som händer innan = tecknet är bara att variablerna itemNames och totalPrice hämtas ut från objektet reduce skapar.
+
 // Reduce 3.3 Group people that has the same age -----------------------------
-// const people = [
-//   { name: 'Kyle', age: 26 },
-//   { name: 'John', age: 31 },
-//   { name: 'Sally', age: 42 },
-//   { name: 'Jill', age: 42 },
-// ];
 
 // // Solution:
 // // const result = people.reduce((groupedPeople, person) => {
