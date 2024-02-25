@@ -10,55 +10,57 @@
 */
 
 // TODO Exempel 1. ---------------------------
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-}
 
-const person1 = new Person('Alice', 30);
-const person2 = new Person('Bob', 25);
+// Solution:
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
 
-console.log(person1); // Person { name: 'Alice', age: 30 }
-console.log(person2); // Person { name: 'Bob', age: 25 }
+// const person1 = new Person('Alice', 30);
+// const person2 = new Person('Bob', 25);
 
-// TODO Exempel 2. Skapa en enkel bilmodell ---------------------------  
-function Car(make, model, year) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
+// console.log(person1); // Person { name: 'Alice', age: 30 }
+// console.log(person2); // Person { name: 'Bob', age: 25 }
 
-  this.displayInfo = function () {
-    console.log(`This is a ${this.year} ${this.make} ${this.model}.`);
-  };
-}
+// TODO Exempel 2. Skapa en enkel bilmodell ---------------------------
 
-// Skapa en ny instans av Car
-let myCar = new Car('Toyota', 'Camry', 2020);
+// Solution:
+// function Car(make, model, year) {
+//   this.make = make;
+//   this.model = model;
+//   this.year = year;
 
-// Anropa displayInfo-metoden för att visa information om bilen
-myCar.displayInfo();
+//   this.displayInfo = function () {
+//     console.log(`This is a ${this.year} ${this.make} ${this.model}.`);
+//   };
+// }
 
+// let myCar = new Car('Toyota', 'Camry', 2020);
+// myCar.displayInfo();
 
-// TODO Exempel 3. Skapa en enkel bilmodell och använd map() för att skapa flera instanser av Car från en array med objektdata ---------------------------  
-function Car(make, model, year) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
-  
-  this.displayInfo = function() {
-    console.log(`This is a ${this.year} ${this.make} ${this.model}.`);
-  };
-}
+// TODO Exempel 3. Skapa en enkel bilmodell och använd map() för att skapa flera instanser av Car från en array med objektdata ---------------------------
 
-// Array med objektdata för bilar
-let carsData = [
-  { make: 'Toyota', model: 'Camry', year: 2020 },
-  { make: 'Honda', model: 'Civic', year: 2018 },
-  { make: 'Ford', model: 'Fusion', year: 2019 }
-];
+// Solution:
+// function Car(make, model, year) {
+//   this.make = make;
+//   this.model = model;
+//   this.year = year;
 
-// Skapa flera instanser av Car med map()
-let cars = carsData.map(carData => new Car(carData.make, carData.model, carData.year));
+//   this.displayInfo = function() {
+//     console.log(`This is a ${this.year} ${this.make} ${this.model}.`);
+//   };
+// }
 
-// Anropa displayInfo för varje bil
-cars.forEach(car => car.displayInfo());
+// // Array med objektdata för bilar
+// let carsData = [
+//   { make: 'Toyota', model: 'Camry', year: 2020 },
+//   { make: 'Honda', model: 'Civic', year: 2018 },
+//   { make: 'Ford', model: 'Fusion', year: 2019 }
+// ];
+
+// // Skapa flera instanser av Car med map()
+// let cars = carsData.map(carData => new Car(carData.make, carData.model, carData.year));
+
+// // Anropa displayInfo för varje bil
+// cars.forEach(car => car.displayInfo());
