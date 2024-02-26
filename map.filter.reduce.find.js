@@ -1,32 +1,29 @@
 // Resources:
 // Reduce: https://www.youtube.com/watch?v=s1XVfm5mIuU
 
-
-// Array methods: 
+//!  Array methods:
 // 1. MAP
 // 2. FILTER
 // 3. REDUCE
 // 4. FIND
 
-// 1. MAP ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
+// TODO 1. MAP ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
-// Map 1.1 map all elements in the array and doubble them -----------------------------
+//* Map 1.1 map all elements in the array and doubble them -----------------------------
 // let arr = ['a','b','c','d','e','f','g']
 
-// // Solution
-// // let allLettersDoubbled = arr.map((parameter) => {
-// //   return parameter + parameter
-// // })
-// // console.log(allLettersDoubbled); // Prints: ['aa', 'bb', 'cc', 'dd', 'ee', 'ff', 'gg']
+// Solution
+// let allLettersDoubbled = arr.map((parameter) => {
+//   return parameter + parameter
+// })
+// console.log(allLettersDoubbled); // Prints: ['aa', 'bb', 'cc', 'dd', 'ee', 'ff', 'gg']
 
-// Map 1.2  -----------------------------
+// * Map 1.2  -----------------------------
 // For every element, we create an object containing:
 // - The original value (value).
 // - The index of the element in the array, incremented by 1 (index).
 // - A boolean indicating whether the element is in uppercase (isUpperCase).
 // - The original array
-
-// const arr = ['A', 'b', 'C', 'd', 'e', 'f', 'g'];
 
 // Solution:
 // const allElems = arr.map((parameter, index, array) => {
@@ -38,9 +35,9 @@
 //   }
 // })
 // console.log(allElems);
-// // Prints: an array of objects, each containing information about the corresponding element in the original array.
+// Prints: an array of objects, each containing information about the corresponding element in the original array.
 
-// Map 1.3 print all items names and price -----------------------------
+// * Map 1.3 print all items names and price -----------------------------
 // const items = [
 //   { name: 'Bike', price: 100 },
 //   { name: 'TV', price: 200 },
@@ -51,14 +48,14 @@
 //   { name: 'Keyboard', price: 25 },
 // ];
 
-// //  Solution
-// // let namesAndPrices = items.map((parameter) => {
-// //   return `${parameter.name} ${parameter.price}`
-// // })
-// // console.log(namesAndPrices);
-// // Prints: An array with all the items names and prices
+//  Solution
+// let namesAndPrices = items.map((parameter) => {
+//   return `${parameter.name} ${parameter.price}`
+// })
+// console.log(namesAndPrices);
+// Prints: An array with all the items names and prices
 
-// 2. FILTER ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
+// TODO 2.  FILTER ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
 // Filter 2.1 filter out all prices <= to 100. -----------------------------
 // const items = [
@@ -92,7 +89,7 @@
 //   });
 //console.log(allPricesLessThan100); // Prints: [100, 10, 5, 25]
 
-// 3. REDUCE ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
+// TODO 3. REDUCE ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
 // Reduce 3.1 Add all prices and print the total -----------------------------
 // const items = [
@@ -157,20 +154,20 @@
 
 // Reduce 3.3 Group people that has the same age -----------------------------
 
-// // Solution:
-// // const result = people.reduce((groupedPeople, person) => {
-// //   const age = person.age;
-// //   if (groupedPeople[age] == null) {
-// //     groupedPeople[age] = [];
-// //   }
-// //   groupedPeople[age].push(person);
-// //   return groupedPeople;
-// // }, {});
+// Solution:
+// const result = people.reduce((groupedPeople, person) => {
+//   const age = person.age;
+//   if (groupedPeople[age] == null) {
+//     groupedPeople[age] = [];
+//   }
+//   groupedPeople[age].push(person);
+//   return groupedPeople;
+// }, {});
 
-// // console.log(result);
-// // Prints: 26: (1 person)
-// //         31: (1 person)
-// //         42: (2 people)
+// console.log(result);
+// Prints: 26: (1 person)
+//         31: (1 person)
+//         42: (2 people)
 
 // Reduce 3.4 Index and array, (rarely used) -----------------------------
 // const numbers = [13, 2, 5]
@@ -183,7 +180,7 @@
 
 // console.log(sum);
 
-// 4. FIND ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
+// TODO  4. FIND ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
 // Find 4.1 find an item in the array
 
@@ -197,10 +194,10 @@
 //   { name: 'Keyboard', price: 25 },
 // ];
 
-// // Solution
-// // const foundItem = items.find((item) => {
-// //   return item.name === 'Book';
-// // });
+// Solution
+// const foundItem = items.find((item) => {
+//   return item.name === 'Book';
+// });
 
-// // console.log(foundItem);
-// // Prints: {name: 'Book', price: 5}
+// console.log(foundItem);
+// Prints: {name: 'Book', price: 5}

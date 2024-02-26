@@ -1,20 +1,13 @@
-/* Contents:
+// ! Contents:
+// 1. For Loop
+// 2. While Loop
+// 3. Do While
+// 4. for in (objects)
+// 5. for of (arrays)
+// 6. forEach (array)
 
-1. For Loop
-2. While Loop
-3. Do While
-4. for in (objects)
-5. for of (arrays)
-6. forEach (array)
-
-map
-filter
-reduce
-
-*/
-
-// 1 For Loop (run a specific number of times) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
-// 1.1 For loop  5 to 10.
+// TODO 1 For Loop (run a specific number of times) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+// * 1.1 For loop  5 to 10  ----------------------------------------------------------------
 
 // Solution:
 // for (let i = 5; i <= 10; i++) {
@@ -22,7 +15,7 @@ reduce
 //   }
 //   Prints: 5 6 7 8 9 10
 
-// 1.2 For Loop ----------------------------------------------------------------
+// * 1.2 For Loop ----------------------------------------------------------------
 // for loop 3-0
 
 // Solution:
@@ -31,7 +24,7 @@ reduce
 //   }
 //   Prints: 3 2 1 0
 
-// 1.2 For Loop ----------------------------------------------------------------
+// * 1.2 For Loop ----------------------------------------------------------------
 // for loop an array, print each index and each item
 //let vacationSpots = ['Bali', 'Paris', 'Tulum']
 
@@ -43,7 +36,7 @@ reduce
 //           1 'Paris'
 //           2 'Tulum'
 
-// 1.3 For Loop Nested ----------------------------------------------------------------
+// * 1.3 For Loop Nested ----------------------------------------------------------------
 // Nested Loops, find the names that exists in both arrays and push them to an array called mutualFollowers, print that array.
 // let bobsFollowers = ['john', 'jane', 'jill', 'juno'];
 // let tinasFollowers = ['john', 'bob', 'jane'];
@@ -62,9 +55,9 @@ reduce
 // console.log(mutualFollowers)
 //   Prints: [ 'john', 'jane' ]
 
-// 2. While Loop (when you dont know how many times to run the loop) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+// TODO 2. While Loop (when you dont know how many times to run the loop) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
 
-// 2. 1 While Loop, randomly loop through the array until 'spade', first declare a variable called currentCard. Also keep track of iterations.
+// * 2. 1 While Loop, randomly loop through the array until 'spade', first declare a variable called currentCard. Also keep track of iterations. ----------
 // (comment out the line with the condition till the end or i'll get an infinite)
 // const cards = ['diamond', 'spade', 'heart', 'club'];
 
@@ -79,8 +72,8 @@ reduce
 // }
 //   Prints: ... Iteration x: spade
 
-// 3. Do While (runs at least once)----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
-// 3.1 Do While until correct number of cups needed. (comment out last line untill finished writing it)
+// TODO 3. Do While (runs at least once)----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+// *3.1 Do While until correct number of cups needed. (comment out last line untill finished writing it) -------------------------
 
 // Solution:
 // let cupsOfSugarNeeded = 5;
@@ -92,7 +85,7 @@ reduce
 // } while (cupsAdded < cupsOfSugarNeeded);
 //   Prints: 1 2 3 4 5
 
-// 3.2 Do While dice ----------------------------------------------------------------
+// * 3.2 Do While dice ----------------------------------------------------------------
 // Do While untill dice target-number produced
 
 // Solution:
@@ -112,9 +105,9 @@ reduce
 //                  Roll # 3 : Rolled 6
 //                  TargetNumber 6 was rolled after 3
 
-// 4. for in ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+// TODO 4. for in ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
 
-// 4.1 for in (object) ----------------------------------------------------------------
+// * 4.1 for in (object) ----------------------------------------------------------------
 // Iterate through the object and print each key and its value.
 
 // Solution:
@@ -131,9 +124,9 @@ reduce
 //          age: 30
 //         city: New York
 
-// 5. for of (array) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+// TODO 5. for of (array) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
 
-// 5.1 for of  ----------------------------------------------------------------
+// * 5.1 for of  ----------------------------------------------------------------
 // Loop through the array [1, 2, 3, 4, 5]
 
 // Solution:
@@ -144,9 +137,9 @@ reduce
 // }
 // Prints: 1 2 3 4 5
 
-// 5. forEach (array) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
+// TODO 5. forEach (array) ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- * ----- *
 
-// 5.1 forEach anonymous and arrow ------------------------------------------------
+// * 5.1 forEach anonymous and arrow ------------------------------------------------
 //Loop through an array: [1,2,3,4,5], and print all numbers with anonymous function and then with arrow function
 
 // Solution:
@@ -161,7 +154,7 @@ reduce
 // })
 //   Prints: 1 2 3 4 5
 
-// 5.2 forEach ------------------------------------------------
+// * 5.2 forEach ------------------------------------------------
 // Print a formatted string for each persons name with arrow FC and then anonymous FC
 
 // const people = [
@@ -184,10 +177,9 @@ reduce
 //         Charlie
 //         David
 
-// ------------------------------------------------------------------------------------------------------------------------------------------------
+// ! ------------------------------------------------------------------------------------------------------------------------------------------------
 // Continue @ https://www.codecademy.com/courses/introduction-to-javascript/lessons/loops/exercises/break-keyword
 
 // Solution:
 
 //   Prints:
-

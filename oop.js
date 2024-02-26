@@ -1,10 +1,10 @@
-// Med ES6 kom ny syntax som gör att vi kan skapa mer klassiska class filer med JavaScript
-// Detta liknar sättet manga 00P programmringsspräk som t.ex. Java, C+ och C# fungerar.
-// Detta är dock syntaktiskt socker 1 bakgrunden är fortfarande JavaScript ett prototypbaserat språk
+// * Med ES6 kom ny syntax som gör att vi kan skapa mer klassiska class filer med JavaScript
+// * Detta liknar sättet manga 00P programmringsspräk som t.ex. Java, C+ och C# fungerar.
+// * Detta är dock syntaktiskt socker 1 bakgrunden är fortfarande JavaScript ett prototypbaserat språk
 
-// Konstruktorfunktion - en funktion som man kan skapa nya instanser/objekt med. (Arrow function is not suitable for constructor functions because it binds .this differently)
+// * Konstruktorfunktion - en funktion som man kan skapa nya instanser/objekt med. (Arrow function is not suitable for constructor functions because it binds .this differently)
 
-// Övning 1 ------------------------------------------------------------
+// * Övning 1 ------------------------------------------------------------
 // function Car(name, color) {
 //   this.name = name;
 //   this, (color = color);
@@ -27,7 +27,7 @@
 // console.log(car1);
 // console.log(car2);
 
-// Övning 2 --------------------------------------------------
+// * Övning 2 --------------------------------------------------
 
 // Konstruktorfunktion
 // function SocialMediaProfile(username) {
@@ -65,7 +65,7 @@
 //         Friends: Torsten, Stina
 //         Posts: Hej min första post, Jag såg en grym rulle igår
 
-//  JS-OOP the old way  ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
+//  ! JS-OOP the old way  ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
 // 1. Konstruktorfunktion Song:  Skapa en konstruktorfunktion Song som initieras med egenskaper som title, artist, och duration.
 // 2. Metod playSong: Lägg till en metod playSong som skriver ut "Playing [title] by [artist]".
@@ -93,9 +93,9 @@
 // console.log(mySong.playSong()) // Output: Playing Bohemian Rhapsody by Queen
 // console.log(yourSong.playSong()) // Output: Playing Happy by Pharrell
 
-//  JS-OOP the new ES6 way ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
+// ! JS-OOP the new ES6 way ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---* ---*
 
-// Exempel 1. --------------------------------------
+// * Exempel 1. --------------------------------------
 // Konstruktorfunktion
 // class SocialMediaProfile {
 //   constructor(username) {
@@ -127,7 +127,7 @@
 
 // console.log(myProfile.displayProfile());
 
-// Exempel 2. Gör om "Song" med ES6-sättet ---------------------------------------------
+// * Exempel 2. Gör om "Song" med ES6-sättet ---------------------------------------------
 
 // class Song {
 //   constructor(title, artist, duration) {
@@ -147,7 +147,7 @@
 // console.log(mySong.playSong());
 // console.log(yourSongplaySong());
 
-//Övning Geometriska figurer med Prototype inheritance --------------------------------------------------------------
+// * Övning Geometriska figurer med Prototype inheritance --------------------------------------------------------------
 // 1. Skapa en konstruktorfunktion Shape som initialiseras med tre egenskaper - name, sides och sideLength
 // 2. Lägg till en ny metod som delas med alla Shape-instanser. Metoden heter calcPerimeter och beräknar omkretsen av den geomteriska figuren.
 // 3. Skapa en ny instans av Shape och kalla den square med sidesär 4 och sideLength är 5.
@@ -171,7 +171,7 @@
 // console.log(square.calcPerimeter()); // Prints 20
 // console.log(triangle.calcPerimeter()); // Prints 9
 
-// Övning Geometriska figurer med ES6 Classes --------------------------------------------------------------
+// * Övning Geometriska figurer med ES6 Classes --------------------------------------------------------------
 // Skriv om övningen så att du istället för Prototype inheritance använder syntaxen för ES6 classes
 
 // Solution:
@@ -193,7 +193,7 @@
 // console.log(square.calcPerimeter()); // Prints 20
 // console.log(triangle.calcPerimeter()); // Prints 9
 
-// Klassen Bankkonto --------------------------------------------------------------
+// * Klassen Bankkonto --------------------------------------------------------------
 // 1. Definiera en klass med namnet “BankAccount”. Bankkontot ska ha egenskaperna “owner” och “balance” 0.0 när instansen skapas.
 // 2. Varje bankkonto ska även ha metoderna:
 // - deposit som sätter in en viss summa från bankkontot
@@ -248,7 +248,7 @@
 //   // Testa negativ insättning
 //   myAccount.deposit(-50);
 
-// Statisk metod ---------------------------------------------------------------------------
+// * Statisk metod ---------------------------------------------------------------------------
 // class User {
 //     constructor(username) {
 //       this.username = username;
@@ -284,8 +284,7 @@
 //   // Anropa en annan statisk metod
 //   User.loginHelloEmail('john.doe@example.com');
 
-
-//   ARV ---------------------------------------------------------------------------------------
+//  * ARV ---------------------------------------------------------------------------------------
 // Basklassen
 // class User {
 //   constructor(username, password) {
@@ -322,29 +321,29 @@
 // console.log(adminUser.displayBannedUsers());
 // console.log(adminUser.displayUsernamePassword());
 
-// Geters and seters -----------------------------------------------------------------------------------------
+// * Geters and seters -----------------------------------------------------------------------------------------
 // class Person {
 //     constructor(name, age) {
 //       this._name = name; // Använd en underskrap för att indikera att detta är en "privat" egenskap
 //       this._age = age;
 //     }
-  
+
 //     // Getter för namn
 //     get name() {
 //       return this._name;
 //     }
-  
+
 //     // Setter för namn
 //     set name(newName) {
 //       // Här kan du lägga till valideringslogik om du vill
 //       this._name = newName;
 //     }
-  
+
 //     // Getter för ålder
 //     get age() {
 //       return this._age;
 //     }
-  
+
 //     // Setter för ålder
 //     set age(newAge) {
 //       if (newAge > 0 && newAge < 150) { // Enkel validering för ålder
@@ -354,18 +353,18 @@
 //       }
 //     }
 //   }
-  
+
 //   // Skapa en instans av Person-klassen
 //   const person1 = new Person("Alice", 30);
-  
+
 //   // Använd getters och setters för att komma åt och ändra egenskaper
 //   console.log(person1.name); // Output: Alice
 //   console.log(person1.age); // Output: 30
-  
+
 //   person1.name = "Bob"; // Använd setter för att ändra namnet
 //   person1.age = 25; // Använd setter för att ändra åldern
-  
+
 //   console.log(person1.name); // Output: Bob
 //   console.log(person1.age); // Output: 25
-  
+
 // ----------------------------------------------------------------------------------------
