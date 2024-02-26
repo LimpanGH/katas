@@ -5,8 +5,6 @@
 // TODO Syntax: ES6-klasser använder den klassbaserade syntaxen med nyckelordet class, medan konstruktorfunktioner är vanliga funktioner där egenskaper och metoder läggs till på this-objektet.
 
 // ! Exempel på ES6-klass: 
-javascript
-Copy code
 class Car {
   constructor(make, model) {
     this.make = make;
@@ -15,8 +13,6 @@ class Car {
 }
 
 // ! Exempel på konstruktorfunktion:
- javascript
-Copy code
 function Car(make, model) {
   this.make = make;
   this.model = model;
